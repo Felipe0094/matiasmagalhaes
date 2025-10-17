@@ -37,37 +37,29 @@ export const Contact = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {contactInfo.map((item, index) => {
             const Icon = item.icon;
-            const content = (
-              <>
+
+            const Wrapper: any = item.link ? "a" : "div";
+            const wrapperProps: any = item.link
+              ? {
+                  href: item.link,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  className:
+                    "bg-card rounded-xl p-8 text-center shadow-md hover:shadow-xl transition-all border border-border hover:border-accent/50 group block"
+                }
+              : {
+                  className:
+                    "bg-card rounded-xl p-8 text-center shadow-md hover:shadow-xl transition-all border border-border group"
+                };
+
+            return (
+              <Wrapper key={index} {...wrapperProps}>
                 <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
                   <Icon className="w-7 h-7 text-accent" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                <p className="text-muted-foreground text-center">{item.info}</p>
-              </>
-            );
-
-            if (item.link) {
-              return (
-                <a
-                  key={index}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-card rounded-xl p-8 text-center shadow-md hover:shadow-xl transition-all border border-border hover:border-accent/50 group block"
-                >
-                  {content}
-                </a>
-              );
-            }
-
-            return (
-              <div
-                key={index}
-                className="bg-card rounded-xl p-8 text-center shadow-md hover:shadow-xl transition-all border border-border group"
-              >
-                {content}
-              </div>
+                <p className="text-muted-foreground text-center break-all">{item.info}</p>
+              </Wrapper>
             );
           })}
         </div>
