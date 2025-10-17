@@ -31,7 +31,7 @@ export const Footer = () => {
             <ul className="space-y-2 text-primary-foreground/80">
               <li>(21) 98675-9394</li>
               <li className="break-all">matiasmagalhaesengenharia@gmail.com</li>
-              <li>Rio de Janeiro - RJ</li>
+              <li>Niterói - RJ</li>
             </ul>
           </div>
         </div>
