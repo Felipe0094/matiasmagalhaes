@@ -17,7 +17,7 @@ export const About = () => {
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             A <strong>Matias Magalhães Construções</strong> é referência em soluções completas para construção civil no Rio de Janeiro. 
-            Com anos de experiência no mercado, oferecemos desde projetos arquitetônicos e estruturais até execução de obras, 
+            Com profissionais experientes no mercado, oferecemos desde projetos arquitetônicos e estruturais até execução de obras, 
             reformas e impermeabilizações com excelência técnica e compromisso com a satisfação de nossos clientes.
           </p>
         </div>
