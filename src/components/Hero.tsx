@@ -45,9 +45,9 @@ export const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-accent rounded-full"></div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center animate-bounce m-0 p-0">
+          <img src="/favicon.svg" alt="Scroll indicator" className="w-6 h-6 m-0" />
         </div>
       </div>
     </section>
